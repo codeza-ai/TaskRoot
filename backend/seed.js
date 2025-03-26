@@ -3,6 +3,7 @@ import Task from "./models/task.js";
 
 dotenv.config();
 
+// Tasks to be inserted into the database
 const tasks = [];
 
 const seedDatabase = async () => {
@@ -39,3 +40,6 @@ const connectDB = async () => {
 };
 
 connectDB(); 
+
+// Run the seeding script by running the following command
+// node {relative path}/seed.js

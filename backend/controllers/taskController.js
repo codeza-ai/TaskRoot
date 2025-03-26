@@ -1,5 +1,7 @@
 import Task from "../models/task.js";
 
+// Controller functions for handling task routes
+// Add a new task
 const addTask = async(req, res) => {
     const task = req.body;
     const newTask = new Task(task);
@@ -11,6 +13,7 @@ const addTask = async(req, res) => {
     }
 }
 
+// Get all tasks
 const getTasks = async(req, res) => {
     try {
         const tasks = await Task.find();
@@ -19,7 +22,7 @@ const getTasks = async(req, res) => {
         res.status(404).json({ message: error.message });
     }
 }
-
+// Get a single task
 const getTask = async(req, res) => {
     try {
         const {id} = req.params;
@@ -33,7 +36,7 @@ const getTask = async(req, res) => {
         res.status(500).json({ message: error.message });
     }
 }
-
+// Update a task
 const updateTask = async(req, res) => {
     try {
         const {id} = req.params;
@@ -51,7 +54,7 @@ const updateTask = async(req, res) => {
         res.status(500).json({ message: error.message });
     }
 }
-
+// Update the status of a task
 const updateStatus = async(req, res) => {
     try {
         const {id} = req.params;
@@ -69,7 +72,7 @@ const updateStatus = async(req, res) => {
         res.status(500).json({ message: error.message });
     }
 }
-
+// Delete a task
 const deleteTask = async(req, res) => {
     try {
         const {id} = req.params;

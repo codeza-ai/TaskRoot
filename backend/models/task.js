@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 
+// Schema for the task
 const taskSchema = new mongoose.Schema({
     id :{
         type: String,
@@ -27,5 +28,6 @@ const taskSchema = new mongoose.Schema({
     }
 });
 
+// Model for the task created using the schema
 const Task = mongoose.model('Task', taskSchema);
 export default Task;

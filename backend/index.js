@@ -8,9 +8,13 @@ dotenv.config();
 const app = express();
 const PORT = 4000;
 
-app.use(cors());
+// Only accept requests from the frontend url
+app.use(cors({
+    origin: 'https://task-root.vercel.app'
+}));
 app.use(bodyParser.json());
 
+// Connect to the database
 await connectDB();
 
 import router from './routes/index.js';
