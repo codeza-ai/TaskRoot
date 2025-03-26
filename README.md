@@ -4,13 +4,13 @@ A full-stack task management application built with React, Node.js, and MongoDB.
 
 ## UI Screenshots
 
-### Main Task List View
+### Home Page View
 ![Home Page View](pictures/ss1.png)
 
-### Task Creation Form
+### List of All Tasks
 ![List of All Tasks](pictures/ss2.png)
 
-### Task Details and Actions
+### Task Creation Form
 ![Task Creation Form](pictures/ss3.png)
 
 ## Features
